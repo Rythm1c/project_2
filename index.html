@@ -19,29 +19,53 @@
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="assets/logo.svg" alt="logo">
+    <header class="left-0 top-0 z-50 w-full absolute" x-data="{navbarOpen: false,}"
+        :class="scrolledFromTop ? 'fixed z-50 bg-white bg-opacity-80 dark:bg-dark shadow-sm backdrop-blur-sm' : 'absolute' ">
+        <div class="container mx-auto">
+            <div class="relative z-40 -mx-4 flex items-center justify-between">
+                <div class="w-60 max-w-full px-4">
+                    <a class="block w-full py-5" href="#">
+                        <img class="block w-full dark:hidden" src="assets/logo.svg" alt="logo">
+                    </a>
+
+                </div>
+                <div class="flex w-full items-center justify-between px-4">
+                    <div>
+                        <nav class="dark:bg-dark-2 absolute right-4 top-full z-40 w-full max-w-[250px] rounded-lg bg-white px-6 py-5 shadow lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:shadow-none lg:dark:bg-transparent hidden"
+                            :class="!navbarOpen && 'hidden' ">
+                            <ul class="blcok lg:flex">
+                                <li><a class="dark:text-dark-6 flex py-2 text-base font-medium text-body-color hover:text-dark dark:hover:text-white lg:ml-12 lg:inline-flex"
+                                        href="#">About us</a></li>
+                                <li><a class="dark:text-dark-6 flex py-2 text-base font-medium text-body-color hover:text-dark dark:hover:text-white lg:ml-12 lg:inline-flex"
+                                        href="#">Features</a></li>
+                                <li><a class="dark:text-dark-6 flex py-2 text-base font-medium text-body-color hover:text-dark dark:hover:text-white lg:ml-12 lg:inline-flex"
+                                        href="#">Pricing</a></li>
+                                <li><a class="dark:text-dark-6 flex py-2 text-base font-medium text-body-color hover:text-dark dark:hover:text-white lg:ml-12 lg:inline-flex"
+                                        href="#">Support</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="hidden justify-end pr-16 sm:flex lg:pr-0">
+                        <a href="#"
+                            class="dark:bg-dark-2 dark:hover:bg-dark-3 rounded-md bg-dark px-7 py-3 text-base font-medium text-white hover:bg-body-color">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <nav>
-            <ul class="navList">
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Support</a></li>
-            </ul>
-        </nav>
-        <button>
-            Get Started
-        </button>
     </header>
-    <main>
-        <table>
-            <tr>
-                <td>
+
+    <div class="relative pb-[110px] pt-[150px] dark:bg-dark lg:pt-[170px]">
+        <div class="container mx-auto">
+            <div class="-mx-4 flex flex-wrap items-center">
+                <div class="w-full px-4 lg:w-1/2">
                     <h2>Build beautiful website with TailGrids blocks.</h2>
                     <P>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at egestas tortor. Morbi sed
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at egestas tortor. Morbi
+                        sed
                         odio id purus pellentesque iaculis nulla facilisi.
                     </P>
                     <form action="">
@@ -49,8 +73,9 @@
                         <input type="email" placeholder="Your work mail">
                         <button id="submmit">Notify Me!</button>
                     </form>
-                </td>
-                <td>
+                </div>
+
+                <div class="w-full px-4 lg:w-1/2">
                     <div class="-mx-2 flex flex-wrap sm:-mx-4">
                         <div class="w-1/2 px-2 sm:px-4"><img src="assets/image-1.jpg" alt="image1"></div>
 
@@ -66,12 +91,11 @@
                         </div>
 
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                </td>
-            </tr>
-        </table>
-    </main>
-    <footer></footer>
 </body>
 
 </html>
