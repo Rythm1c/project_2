@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Roboto;
+}
+
+header {
+    margin: auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header button {
+    border-radius: 5px;
+    border-color: black;
+    background-color: black;
+    font-size: x-small;
+    font-weight: bold;
+    color: white;
+    width: 100px;
+    height: 35px;
+}
+
+header .navList a {
+    text-decoration: none;
+    color: rgb(105, 105, 105);
+    font-size: smaller;
+}
+
+header .navList a:hover {
+    color: rgb(46, 45, 45);
+}
+
+
+header .navList {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+table {
+    margin: auto;
+    width: 60%;
+
+}
+
+td {
+    /* border: 2px solid; */
+    width: 50%;
+}
+/* 
+table img {
+    width: 49%;
+} */
